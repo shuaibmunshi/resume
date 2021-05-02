@@ -7,6 +7,13 @@ jobs:
       image: shuaibmunshi/texlive-docker
       options: -v /workspace:/data
     steps:
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+      - name: Adding Known Hosts
+          run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Compile Latex
@@ -16,14 +23,14 @@ jobs:
           ls -la
           xelatex ShuaibMunshiResume.tex
       - name: switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.ssh }}
+        run: git remote set-url origin ssh://git@github.com/shuaibmunshi/resume
       - name: check for changes
         run: git status
       - name: stage changed files
         run: git add .
       - name: commit changed files
-        run: git commit -m "Auto updating TODO.txt"
-      - name: fetch from master
-        run: git fetch origin master
-      - name: push code to master
-        run: git push origin HEAD:master
+        run: git commit -m "Auto updating ShuaibMunshiResume.pdf"
+      - name: fetch from main
+        run: git fetch origin main
+      - name: push code to main
+        run: git push origin HEAD:main
