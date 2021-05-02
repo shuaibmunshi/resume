@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\lastupdated % Print the Last Updated text at the top right
+
+\namesection{Shuaib}{Munshi}{ % Your name
+% \urlstyle{same}\url{http://debarghyadas.com} \\ % Your website, LinkedIn profile or other web address
+3 Collington Street Nepean Ontario K2G 6X5 \\
+
+\href{mailto:munshi.shuaib@gmail.com}{munshi.shuaib@gmail.com} | 647-778-7108 % Your contact information
+\sectionspace % Some whitespace after the section
+}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+
+\subsection{Carleton University}
+\location{Ottawa, Ontario}
+\descript{Bachelor of Information Technology \\ - Networking}
+\location{2016 - 2020}
+
+\sectionspace % Some whitespace after the section
+
+\subsection{Algonquin College}
+\location{Ottawa, Ontario}
+\descript{Computer Engineering Technology \\ - Networking}
+\location{2016 - 2020}
+
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Links
+%------------------------------------------------
+
+\section{Links} 
+
+Github:// \href{https://github.com/shuaibmunshi}{\bf shuaibmunshi} \\
+LinkedIn:// \href{https://www.linkedin.com/in/shuaib-munshi/}{\bf shuaib-munshi}
+
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+\section{Skills}
+
+\subsection{Systems}
+
+Linux (Ubuntu, CentOS) \textbullet{} Git \textbullet{}  LXC \\
+GitLab CI/CD \textbullet{}  Ansible \textbullet{}  Docker \\ 
+Kubernetes \textbullet{}  Proxmox \textbullet{}  VMware \\
+Jenkins \textbullet{} Jira \textbullet{} GitHub Actions
+
+\sectionspace % Some whitespace after the section
+
+
+\subsection{Programming}
+
+Python \textbullet{} Flask \textbullet{} C++ \textbullet{} Asterisk \textbullet{}  Java \\ 
+ 
+\sectionspace % Some whitespace after the section
+
+\subsection{Networking}
+
+OSPFv2/v3 \textbullet{} EIGRP \textbullet{} BGP \textbullet{} STP \\ 
+MPLS (LDP/RSVP) \textbullet{} UFW/iptables
+
+\sectionspace % Some whitespace after the section
+
+\subsection{Cloud}
+
+Digitalocean \textbullet{} GCP \textbullet{} AWS \textbullet{} GKE \\
+
+\sectionspace % Some whitespace after the section
+
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+\runsubsection{TELUS}
+\descript{| Technology Specialist}
+
+\location{June 2020 - Present | Montreal, QC}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item Contributed LTE and HSPA service modelling code for an internal RAN deployment automation project written in Python
+\item Developed a Flask POST REST endpoint for managing device configuration objects and storing them as artifacts in GitLab using the GitLab API 
+\item Wrote a Python script to automate the setup of a new developer laptop by installing required software, setting required environment variables and rendering a fully configured remote development environment using the VSCode Remote - Containers addon and Docker-compose with an example Flask API project
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{Tactical Technologies Inc.}
+\descript{| DevOps Specialist}
+
+\location{May 2019 - August 2019 | Ottawa, ON}
+\begin{tightitemize}
+\item Developed a multi-threaded Python-based CLI application for automating the testing of the company’s software, gathering system performance data over the course of the batch tests and collating the test results and performance metrics into easily readable reports (work artifacts)
+\item Aided in the development team’s migration from SVN to Git by testing Git integration with Matlab/Simulink Projects, writing procedural documentation for using Git with Simulink and developing a Git merge strategy based on Gitflow which took into account the large binary files generated by Simulink
+\item Built a Jenkins pipeline using Groovy to automate running Matlab unit tests using a distributed Jenkins architecture and collating results from agent nodes in a single report
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+\runsubsection{Canadian Cyber Incident Response Centre (CCIRC)}
+\descript{\\| Cyber Systems Specialist}
+
+\location{May 2018 - August 2018 | Ottawa, ON}
+\begin{tightitemize}
+\item Performed active network and host vulnerability scans using Tenable Nessus
+\item Automated the generation of vulnerable system action item tickets (GitLab tickets with rich text formatting) using MYSQL and Python (using the Pandas data-science Python library)
+\item Automated Linux server host based UFW firewall deployment using Ansible
+\item Wrote a Python script to generate the Ansible YAML configuration files to assign each server’s UFW firewall rules
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{IPFINITY Inc.}
+\descript{| Technical Support Specialist}
+
+\location{April 2013 - September 2016 | Toronto, ON}
+\begin{tightitemize}
+	\item Designed, programmed, tested and deployed custom telephone PBX systems based on customer specifications using Digium Asterisk
+	\item Performed routing system administration tasks necessary to maintain a cloud-based Linux environment such as server hardening (Fail2Ban), software installation and updating and configuring user roles and credentials 
+	\item Troubleshot customer VoIP and Internet connectivity issues using a combination of syslog messages and real-time tools like MTR and tcpdump
+	\item Coordinated the turn-up process with customers to ensure a smooth cut-over as well as made the back-end changes necessary for porting customer DIDs
+\end{tightitemize}
+
+\section{Extra-Curricular Experience} 
+
+\begin{tabular}{rll}
+2020	 & Certification & \href{https://www.credly.com/badges/7a6c2383-9563-4d67-9878-a40bee831e53?source=linked_in_profile}{\bf CENGN Docker \& Kubernetes Level 1} \\
+2019	 & 2\textsuperscript{nd} Place & Magnet Forensics CTF Ottawa \\
+2018	 & 2\textsuperscript{nd} Place & CyberSCI-Cyber Security Challenge Ottawa\\
+
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

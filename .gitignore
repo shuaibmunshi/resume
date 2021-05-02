@@ -1,0 +1,6 @@
+*.log
+tlpkg/*
+texmf-dist/*
+*.out
+*.synctex.gz
+*.aux
