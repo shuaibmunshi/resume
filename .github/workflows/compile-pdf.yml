@@ -24,6 +24,7 @@ jobs:
           ls -la
           xelatex ShuaibMunshiResume.tex
       - name: Check output of compile
+        uses: actions/checkout@v2
         run: |
           ls -la
           git status
