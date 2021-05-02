@@ -13,8 +13,8 @@ jobs:
         run: |
           pwd
           ls -la
-          ls -la /data
-          xetex /data/ShuaibMunshiResume.tex
+          ls -la
+          xetex ShuaibMunshiResume.tex
       - name: Commit pdf
         uses: EndBug/add-and-commit@v7
         with:
