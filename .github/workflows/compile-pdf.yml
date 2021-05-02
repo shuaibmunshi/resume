@@ -27,7 +27,6 @@ jobs:
       - name: Commit updated PDF
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: $GITHUB_WORKSPACE/*.pdf
           skip_dirty_check: true
           commit_message: Auto commit from github action
       # - name: Commit PDF
