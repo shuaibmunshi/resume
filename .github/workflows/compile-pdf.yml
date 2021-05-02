@@ -20,19 +20,19 @@ jobs:
           ls -la
           ls -la
           xelatex ShuaibMunshiResume.tex
-      - name: Commit PDF
-        uses: EndBug/add-and-commit@v7.0.0
-        with:
-          default_author: github_actions
-      # - name: switching from HTTPS to SSH
-      #   run: git remote set-url origin ssh://git@github.com/shuaibmunshi/resume
-      # - name: check for changes
-      #   run: git status
-      # - name: stage changed files
-      #   run: git add .
-      # - name: commit changed files
-      #   run: git commit -m "Auto updating ShuaibMunshiResume.pdf"
-      # - name: fetch from main
-      #   run: git fetch origin main
-      # - name: push code to main
-      #   run: git push origin HEAD:main
+      # - name: Commit PDF
+      #   uses: EndBug/add-and-commit@v7.0.0
+      #   with:
+      #     default_author: github_actions
+      - name: switching from HTTPS to SSH
+        run: git remote set-url origin ssh://git@github.com:shuaibmunshi/resume
+      - name: check for changes
+        run: git status
+      - name: stage changed files
+        run: git add .
+      - name: commit changed files
+        run: git commit -m "Auto updating ShuaibMunshiResume.pdf"
+      - name: fetch from main
+        run: git fetch origin main
+      - name: push code to main
+        run: git push origin HEAD:main
