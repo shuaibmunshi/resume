@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check git
         run: |
-          ls -la ~/.git
+          ls -la ~
           ls -la
 
       # - name: Install SSH Key
