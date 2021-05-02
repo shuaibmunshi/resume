@@ -24,7 +24,9 @@ jobs:
           ls -la
           xelatex ShuaibMunshiResume.tex
       - name: Check output of compile
-        run: ls -la
+        run: |
+          ls -la
+          git status
       - name: Commit updated PDF
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
