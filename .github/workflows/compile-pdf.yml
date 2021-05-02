@@ -9,13 +9,10 @@ jobs:
     steps:
       - name: Compile Latex
         uses: actions/checkout@v2
-        with:
-          entrypoint: xetex /data/ShuaibMunshiResume.tex
+        run: xetex /data/ShuaibMunshiResume.tex
       - name: Commit pdf
         uses: EndBug/add-and-commit@v7
         with:
           author_name: Shuaib Munshi
           author_email: munshi.shuaib@gmail.com
-          cwd: '/data'
           message: 'Committing the compiled pdf from inside docker'
-          
