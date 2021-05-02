@@ -34,6 +34,9 @@ jobs:
           add: '*.pdf --force'
           message: 'Auto commit from github action'
           default_author: github_actions
+          push: true
+        env:
+            GITHUB_TOKEN: ${{ github.token }}
       # - name: switching from HTTPS to SSH
       #   run: git remote set-url origin ssh://git@github.com:shuaibmunshi/resume.git
       # - name: check for changes
