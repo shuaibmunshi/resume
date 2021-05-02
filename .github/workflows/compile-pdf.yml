@@ -7,14 +7,6 @@ jobs:
       image: shuaibmunshi/texlive-docker
       options: -v /workspace:/data
     steps:
-      - name: Check git
-        run: |
-          ls -la
-      # - name: Install SSH Key
-      #   uses: shimataro/ssh-key-action@v2
-      #   with:
-      #     key: ${{ secrets.SSH_PRIVATE_KEY }} 
-      #     known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
       - name: Checkout code
         uses: actions/checkout@v2
         with:
@@ -40,16 +32,5 @@ jobs:
           push: true
         env:
             GITHUB_TOKEN: ${{ github.token }}
-      # - name: switching from HTTPS to SSH
-      #   run: git remote set-url origin ssh://git@github.com:shuaibmunshi/resume.git
-      # - name: check for changes
-      #   run: git status
-      # - name: stage changed files
-      #   run: git add .
-      # - name: commit changed files
-      #   run: git commit -m "Auto updating ShuaibMunshiResume.pdf"
-      # - name: fetch from main
-      #   run: git fetch origin main
-      # - name: push code to main
-      #   run: git push origin HEAD:main
+
 
