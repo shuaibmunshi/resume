@@ -24,7 +24,6 @@ jobs:
         run: |
           pwd
           ls -la
-          ls -la
           xelatex ShuaibMunshiResume.tex
       - name: Check output of compile
         run: |
