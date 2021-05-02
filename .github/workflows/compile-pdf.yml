@@ -7,16 +7,16 @@ jobs:
       image: shuaibmunshi/texlive-docker
       options: -v /workspace:/data
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.RESUME_TOKEN }}
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: ${{ github.head_ref }}
+      #     token: ${{ secrets.RESUME_TOKEN }}
       - name: Compile Latex
         run: |
           pwd
           ls -la
-          xelatex ShuaibMunshiResume.tex
+          xelatex /github/workspace/ShuaibMunshiResume.tex
       - name: Check output of compile
         run: |
           ls -la
@@ -31,6 +31,6 @@ jobs:
           default_author: github_actions
           push: true
         env:
-            GITHUB_TOKEN: ${{ github.token }}
+            GITHUB_TOKEN: ${{ secrets.RESUME_TOKEN }}
 
 
