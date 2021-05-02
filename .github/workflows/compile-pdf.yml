@@ -25,7 +25,7 @@ jobs:
       #   with:
       #     default_author: github_actions
       - name: switching from HTTPS to SSH
-        run: git remote set-url origin ssh://git@github.com:shuaibmunshi/resume
+        run: git remote set-url origin ssh://git@github.com:shuaibmunshi/resume.git
       - name: check for changes
         run: git status
       - name: stage changed files
