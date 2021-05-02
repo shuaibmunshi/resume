@@ -8,7 +8,6 @@ jobs:
       options: -v /workspace:/data
     steps:
       - name: Compile Latex
-        uses: actions/checkout@v2
         run: xetex /data/ShuaibMunshiResume.tex
       - name: Commit pdf
         uses: EndBug/add-and-commit@v7
