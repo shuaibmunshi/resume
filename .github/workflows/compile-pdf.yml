@@ -5,18 +5,18 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: shuaibmunshi/texlive-docker
-      options: -v /github/workspace:/data
+      options: -v /gitub/workspace:/data
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
-      #   with:
-      #     ref: ${{ github.head_ref }}
-      #     token: ${{ secrets.RESUME_TOKEN }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.RESUME_TOKEN }}
       - name: Compile Latex
         run: |
           pwd
-          ls -la /data/
-          xelatex /data/ShuaibMunshiResume.tex
+          ls -la
+          xelatex ShuaibMunshiResume.tex
       - name: Check output of compile
         run: |
           ls -la
