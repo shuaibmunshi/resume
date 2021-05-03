@@ -15,7 +15,7 @@ jobs:
       - name: Compile Latex
         run: |
           pwd
-          ls -la
+          ls -la /data/
           xelatex /data/ShuaibMunshiResume.tex
       - name: Check output of compile
         run: |
