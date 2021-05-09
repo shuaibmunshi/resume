@@ -36,5 +36,3 @@ jobs:
           branch: development
         env:
             GITHUB_TOKEN: ${{ secrets.RESUME_TOKEN }}
-
-
