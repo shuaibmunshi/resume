@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: origin/development
+          ref: development
           token: ${{ secrets.RESUME_TOKEN }}
       - name: Compile Latex
         run: |
