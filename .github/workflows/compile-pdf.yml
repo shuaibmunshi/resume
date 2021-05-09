@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: development
+          # ref: development
           token: ${{ secrets.RESUME_TOKEN }}
       - name: Compile Latex
         run: |
@@ -34,6 +34,10 @@ jobs:
           author_name: github_actions
           # push: origin main --force
           # push: ${{ github.ref }}
-          push: main
+          push: origin development:main --force
         env:
             GITHUB_TOKEN: ${{ secrets.RESUME_TOKEN }}
+        # run: |
+        #   git config --global user.name 'Github Actions'
+        #   git config --global user.email 'githubactions@users.noreply.github.com'
+        #   git commit -am "Automated report"
