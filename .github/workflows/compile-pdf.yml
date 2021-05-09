@@ -33,6 +33,7 @@ jobs:
           message: 'Auto commit from github action'
           author_name: github_actions
           # push: origin main --force
-          push: ${{ github.ref }}
+          # push: ${{ github.ref }}
+          push: main
         env:
             GITHUB_TOKEN: ${{ secrets.RESUME_TOKEN }}
