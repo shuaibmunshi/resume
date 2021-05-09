@@ -1,5 +1,8 @@
 name: compile-pdf
-on: push
+on: 
+  push:
+    branches:
+      - development
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +32,8 @@ jobs:
         with:
           message: 'Auto commit from github action'
           default_author: github_actions
-          push: true
+          push: origin main --force
+          branch: development
         env:
             GITHUB_TOKEN: ${{ secrets.RESUME_TOKEN }}
 
