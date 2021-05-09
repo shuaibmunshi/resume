@@ -23,10 +23,8 @@ jobs:
       - name: Check output of compile
         run: |
           ls -la
-      # - name: Commit updated PDF
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: Auto commit from github action
+      - name: Generate png
+        run: pdftoppm -png ShuaibMunshiResume.pdf images/ShuaibMunshiResume.png
       - name: Commit PDF
         uses: EndBug/add-and-commit@v7.0.0
         with:
