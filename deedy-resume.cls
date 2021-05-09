@@ -9,14 +9,7 @@
 \LoadClass{article}
 
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry} % Specifies horizontal and vertical page margins
-% \usepackage{hyperref} % Required for links
-\hypersetup{
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = blue, %Colour for external hyperlinks
-  linkcolor    = blue, %Colour of internal links
-  citecolor   = red %Colour of citations
-}
-
+\usepackage[hidelinks]{hyperref} % Required for links
 
 %----------------------------------------------------------------------------------------
 %	COLORS
