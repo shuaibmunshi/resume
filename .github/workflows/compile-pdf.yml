@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: shuaibmunshi/texlive-docker
-      options: -v /gitub/workspace:/data
+      options: -v /github/workspace:/data
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
