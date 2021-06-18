@@ -15,8 +15,8 @@ jobs:
         with:
           # ref: development
           token: ${{ secrets.RESUME_TOKEN }}
-      - name: Remove old PNG
-        run: git rm images/ShuaibMunshiResume-*
+      # - name: Remove old PNG
+      #   run: git rm images/ShuaibMunshiResume-*
       - name: Compile Latex
         run: |
           pwd
