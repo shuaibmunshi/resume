@@ -25,8 +25,8 @@ jobs:
       - name: Check output of compile
         run: |
           ls -la
-      - name: RM the old png before re-generating it
-        run: rm images/ShuaibMunshiResume*
+      # - name: RM the old png before re-generating it
+      #   run: rm images/ShuaibMunshiResume*
       - name: Generate png
         run: pdftoppm -r 300 -png ShuaibMunshiResume.pdf images/ShuaibMunshiResume
       - name: Commit PDF
