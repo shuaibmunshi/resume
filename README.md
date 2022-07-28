@@ -2,6 +2,7 @@
 
 - Uses GitHub Actions to:
     - [Pull a docker image that contains the tools needed to compile my resume](https://github.com/shuaibmunshi/texlive-docker)
+    - https://hub.docker.com/r/shuaibmunshi/texlive-docker
     - Checkout this repository's development branch
     - Compile the LaTeX document to PDF
     - Generate a PNG from the LaTeX document
