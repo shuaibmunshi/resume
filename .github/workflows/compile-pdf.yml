@@ -24,9 +24,9 @@ jobs:
           xelatex ShuaibMunshiResume.tex
       - name: Check output of compile
         run: |
-          ls -la
-      # - name: RM the old png before re-generating it
-      #   run: rm images/ShuaibMunshiResume*
+          ls -la images
+      - name: RM the old png before re-generating it
+        run: rm images/ShuaibMunshiResume*.png
       - name: Generate png
         run: pdftoppm -r 300 -png ShuaibMunshiResume.pdf images/ShuaibMunshiResume
       - name: Commit PDF
