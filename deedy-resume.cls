@@ -7,6 +7,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass{article}
+\pagenumbering{gobble} 
 
 \usepackage[hmargin=1cm, vmargin=1cm]{geometry} % Specifies horizontal and vertical page margins
 \usepackage[hidelinks]{hyperref} % Required for links
