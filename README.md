@@ -10,4 +10,4 @@
 
 <!-- ![Alt text](images/resumeworkflow.png?raw=true "Workflow") -->
 
-![Alt text](images/ShuaibMunshiResume-1.png?raw=true "Resume")
+![Alt text](images/ShuaibMunshiResume.png?raw=true "Resume")
